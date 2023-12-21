@@ -23,10 +23,10 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 //route
-const variablesRoute = require("./route/variable.route");
+const transactionRoute = require("./route/transaction.route");
 const userRoute = require("./route/user.route");
-app.use("/api/variable", variablesRoute);
-app.use("/api/user", userRoute);
+app.use("/portfolio/transactions", transactionRoute);
+app.use("/portfolio/user", userRoute);
 //start the server
 app.listen(port, () => {
   console.log("listen to port ", port);
